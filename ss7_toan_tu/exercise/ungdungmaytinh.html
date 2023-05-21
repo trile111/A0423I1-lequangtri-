@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!--<form action="JS_prac.html" method="get">-->
+        <td>Caculator<br></td>
+        <td></td>
+        <td>
+            <input type="text" name="" id="input1">
+        </td>
+        <td></td>
+        <td>
+            <td>
+                <input type="text" name="" id="input2">
+            </td>
+            <td></td>
+            <td>
+                <br><br>
+                <button onclick="cong()">+</button>
+                <button onclick="tru()">-</button>
+                <button onclick="nhan()">*</button>
+                <button onclick="chia()">/</button>
+                
+                <script>
+                     function cong(){
+                         let t01 =  +document.getElementById("input1").value;
+                         let t02 = +document.getElementById("input2").value;   
+                         let ketqua2=t01+t02;
+                         alert("ket qua la:"+ ketqua2);                
+                     }
+                     function tru(){
+                         let t01 = document.getElementById("input1").value;
+                         let t02 = document.getElementById("input2").value;
+                         let ketqua2=t01-t02;
+                         alert("ket qua la:"+ ketqua2);
+                    }
+                    function nhan(){
+                        let t01 =  document.getElementById("input1").value;
+                        let t02 = document.getElementById("input2").value;
+                        let ketqua2=t01*t02;
+                        alert("ket qua la:"+ ketqua2);
+                    }
+                     function chia(){
+                         let t01 =  document.getElementById("input1").value;
+                         let t02 = document.getElementById("input2").value;
+                         let ketqua2=t01/t02
+                         alert("ket qua la:"+ ketqua2);
+                    }
+                </script>
+</html>
