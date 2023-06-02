@@ -7,12 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-    <script> 
-        document.write("<table border=1 width='100%' >")
-            cout (a = 2 ; a <=20 ; a++)
-            let T1 document.getElementById("a").value;
-            let T2 document.getElementById("b").value;
-
-    </script>
+    <script>
+  var numbers = prompt("Nhap so nguyen to");
+  
+  var count = 0;
+  
+  var N = 2;
+  
+  while (count < numbers) {
+    var isPrime = true;
+  
+    for (var i = 2; i <= Math.sqrt(N); i++) {
+      if (N % i === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+  
+    if (isPrime) {
+      document.write(N);
+      count++;
+    }
+    N++;
+  }
+  
+  
+  
+      </script>
 </body>
 </html>
