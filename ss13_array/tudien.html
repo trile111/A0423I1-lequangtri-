@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style> 
+        input[type=text] {
+            width: 300px;
+            font-size: 16px;
+            border: 2px solid #ccc; 
+            border-radius: 4px;
+            padding: 12px 10px 12px 10px;
+        }
+        #sumbit {
+            border-radius: 2px;
+            padding: 10px 32px;
+            font-size: 16px;
+        }
+        </style>
+    </head>
+    <body>
+       <h2>Từ Điển Anh - Việt</h2>
+       <form>
+        <input id="trile1" type="text">
+        <input type="sumbit" value="tìm" onclick="trile15()">
+        <p id="trile2"></p>
+    </form>
+    <script>
+        function trile15() {
+            let array1 = ['hello', 'english', 'callphone','FAKER'];
+            let array2 = ['xin chào vy lé', 'tieng anh','dien thoai thong minh','vua LMHT'];
+            let a = document.getElementById('trile1').value;
+            for (let i = 0; i< array1.length;i++){
+                if(a == array1[i]  ){
+                    document.getElementById('trile2').innerHTML=i + ':'+array2[i]
+                    return;
+                }
+                else {
+                    document.getElementById('trile2').innerHTML='không tìm thấy'
+                }
+            }
+    
+        }
+        </script>
+</body>
+</html> 
