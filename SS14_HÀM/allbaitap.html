@@ -1,0 +1,390 @@
+//bai1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 1</title>
+</head>
+<body>
+<script>
+    function alertMessage() {
+        alert("Xin chào");
+    }
+
+    alertMessage();
+</script>
+</body>
+</html>
+ .
+<body>
+    <button onclick="alertMessage()">Click me!</button>
+</body>
+</html>
+<script>
+ function alertMessage(){
+    document.write("Xin Chao!");
+ }
+</script>
+//bai2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 2</title>
+</head>
+<body>
+<script>
+    let dis = +prompt("Nhập vào số bất kỳ: ");
+
+    function increaseNumber(num) {
+        num = num + 1;
+        return num;
+    }
+
+    alert(increaseNumber(dis));
+</script>
+</body>
+</html>
+.
+<body>
+    <h1>Chuyển đội nhiệt độ F sang C</h1> <br>
+    <label>Fahrenheit</label>
+
+    <input type="text" id="Fahrenheit" placeholder="Nhập nhiệt độ bạn muốn chuyển đổi">
+    <button onclick="change()">Chuyển đổi</button>
+    <p ><span id="result">Result</span></p>
+
+   
+</body>
+<script>
+    function change(){
+        let f = document.getElementById("Fahrenheit").value
+        let c = (f-32) / 1.8;
+        document.getElementById("result").innerHTML = c;
+    }
+    
+
+
+</script>
+//bai3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 3</title>
+</head>
+<body>
+<script>
+    let dis1 = +prompt("Nhập vào số thứ nhất: ");
+    let dis2 = +prompt("Nhập vào số thứ hai: ");
+
+    function sumNumber(num1, num2) {
+        let sum;
+        if (num1 > num2) {
+            alert("Số thứ nhất lớn hơn số thứ hai");
+        } else if (num1 <= num2) {
+            sum = "Tổng hai số là: " + (num1 + num2);
+        }
+        return sum;
+    }
+
+    alert(sumNumber(dis1, dis2))
+</script>
+</body>
+</html>
+. 
+<script>
+    function number(a,b){
+        if(a>b){
+            alert("tham số 1 lớn hơn tham số 2");
+        }
+        else{
+            return a+b;
+        }
+    }
+
+    let result = number(6,5);
+    alert(result);
+
+    let result1 = number(1,2);
+    alert("Tổng của 2 tham số là"+result1);
+  </script>
+  //bai4
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 4</title>
+</head>
+<body>
+<script>
+    function addNumbers() {
+        let firstNum;
+        let secondNum;
+        let result;
+
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+
+    result = 0;
+    alert(result);
+    result = addNumbers();
+    alert(result);
+</script>
+</body>
+</html>
+. 
+<script>
+    function addNumbers() {
+    firstNum = 4;
+    secondNum = 8;
+    result = firstNum + secondNum;
+    
+    return result;
+    
+}
+result = 0;
+alert(result);
+
+result = addNumbers(); 
+alert(result);
+
+</script>
+//bai5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 5</title>
+</head>
+<body>
+<script>
+    let starName = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function checkZodiac() {
+        let dis = prompt("Nhập tên ngôi sao: ");
+        let index = -1;
+        for (let i = 0; i < starName.length; i++) {
+            if (dis === starName[i]) {
+                index = i;
+            }
+        }
+        if (index !== -1) {
+            alert(constellation[index])
+        } else {
+            alert("Không tìm thấy")
+        }
+    }
+
+    checkZodiac();
+
+</script>
+</body>
+</html>
+. 
+<body>
+    <input type="text" name="" id="star" placeholder="Nhập ngôi sao của bạn">
+    <button onclick="find()">Find</button>
+    <p id="result"></p>
+</body>
+</html>
+<script>
+    let arr1 = [ 'Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2 = [ 'Ursa', 'Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa', 'Major','Leo']
+    function find(){
+        isExit = false;
+        let star = document.getElementById("star").value;
+        for(i=0;i<arr1.length;i++){
+            if(arr1[i]==star){
+                document.getElementById("result").innerHTML = "Chòm sao tương ứng : " + arr2[i];
+                isExit == true;
+                break;
+
+            }
+        }
+        if(isExit==false){
+            document.getElementById("result").innerHTML = "Không tìm thấy chòm sao tương ứng" ;
+
+        }
+    }
+    
+</script>
+ bai4
+ function checkCharacter(){
+    if(isNaN(Character) ===false){
+        return true
+    }    return false        
+}
+let Character = prompt("input character :");
+document.write(checkCharacter(Character))
+bai5
+function checkIntegers(a, b, c) {
+            let max = a;
+            if (b < max) {
+               max = b;
+            }
+            if(c < max){
+                max=c;
+            }
+            return max;
+        }
+        let d = parseFloat(prompt("nhập a :"));
+        let e = parseFloat(prompt("nhập b :"));
+        let f = parseFloat(prompt("nhập c :"));
+        document.write("a = " + d + "<br>");
+        document.write("b = " + e + "<br>");
+        document.write("c = " + f + "<br>");
+        document.write(checkIntegers(d,e,f) + " là số nhỏ nhất");
+        bai6
+        function check(n) {
+           if( Number.isInteger(n) === true){
+            return true
+           }else {
+               return false
+           }          
+        }
+        let n = parseFloat(prompt("input n :"));
+        document.write(check(n));
+        bai7
+        function change(num1, num2) {
+            num1 = num1 - num2;
+            num2 = num1 + num2;
+            num1 = num2 - num1;
+            return [num1, num2]
+        }
+        let num1 = parseFloat(prompt("nhập 1 "));
+        let num2 = parseFloat(prompt("nhập 2 "));
+        document.write(num1+" "+num2+"<br>");
+        document.write(change(num1,num2));
+        bai8
+          function createArray(array) {
+            for (let i = 0; i < 10; i++) {
+                array.push(Math.floor(Math.random() * 50) + 1);
+            }
+            return array;
+        }
+        // document.write(array);
+        function reverse() {
+            array.reverse();
+            return array;
+        }
+        let array = new Array();
+        document.write(createArray(array) + "<br>");
+        document.write("hàm đảo ngược :" + "<br>" + reverse(array));
+        bai9  
+     function charactersArray(arr) {
+            let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            for (let i = 0; i < 50; i++) {
+                arr += possible.charAt(Math.floor(Math.random() * possible.length));
+            }
+            return arr;
+        }
+        function check(arr) {
+            let count = 0;
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] === text) {
+                    count +=1;
+                }
+            } 
+            if (count) {
+                return count;
+            } 
+            else {
+                return -1;
+            }
+        }
+        function main() {
+            let arr = new Array();
+            let text = prompt('nhập vào 1 ký tự để so sánh: ');
+            document.write(text + "<br>");
+            document.write(charactersArray(arr) + "<br>");
+            document.write(check(arr));
+        }
+        main();
+        ,,,,,,
+      1  meo-bat-chuot
+      <center>
+        <h1>Mouse</h1><br>
+        <p id="mouse"></p><br>
+        <h1>Cat</h1><br>
+        <p id="cat"></p><br>
+        <button onclick="onclick1()">speet UP</button>
+        <button onclick="catchthemouse()">catch the mouse</button>
+    </center>
+    
+        class  Ray {
+       constructor (name, amount, speed,) {
+            this.name = name;
+            this.amount = amount;
+            this.speed = speed;
+        }
+            getName = function () {
+                return this.name;
+            }
+            getAmount = function () {
+                return this.amount;
+            }
+            setAmount = function () {
+                this.amount --;
+            }
+            getSpeed = function () {
+                return this.speed;
+            }
+        }
+        class Tom {
+       constructor (name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+           getName = function () {
+                return this.name;
+            }
+            getWeight = function () {
+                return this.weight;
+            }
+            getSpeed = function () {
+                return this.speed;
+            }
+            setSpeed = function () {
+                this.speed++;
+            }
+            catchMouse = function () {
+                if (cat1.getSpeed() > mouse1.getSpeed()) {
+                    return this.eatMouse();
+                }
+            }
+            eatMouse = function () {
+                if (mouse1.getAmount() > 0) {
+                    this.weight++;
+                    mouse1.setAmount ();
+                }else {
+                    return alert ("hết chuột rồi");
+                }
+            }
+        }
+        let mouse1 = new Ray("jerry", 10, 10);
+        let cat1 = new Tom("tom", 20, 9);
+
+        let mouse = document.getElementById("mouse");
+        let Cat = document.getElementById("cat");
+
+        mouse.innerHTML = `${mouse1.getName()} ${mouse1.getAmount()} ${mouse1.getSpeed()}`;
+        Cat.innerHTML = `${cat1.getName()}  ${cat1.getWeight()}  ${cat1.getSpeed()}`;
+        function catchthemouse() {
+            if(cat1.getSpeed() <=mouse1.getSpeed() )
+            return alert("tăng tốc lên");
+            cat1.catchMouse(mouse1);
+            mouse.innerHTML = `${mouse1.getName()} ${mouse1.getAmount()}  ${mouse1.getSpeed()}`;
+            Cat.innerHTML = `${cat1.getName()}  ${cat1.getWeight()}  ${cat1.getSpeed()}`;
+        }
+        function onclick1() {
+            Cat.innerHTML= cat1.setSpeed();
+            mouse.innerHTML = `${mouse1.getName()}    ${mouse1.getAmount()}    ${mouse1.getSpeed()}`;
+            Cat.innerHTML = `${cat1.getName()}    ${cat1.getWeight()}     ${cat1.getSpeed()}`;
+        }
+        
